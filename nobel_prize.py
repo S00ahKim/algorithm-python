@@ -38,7 +38,7 @@ for i in df["IQ"]:
         tmp += 1
         outliers.append(i)
 
-R = int(tmp/len(df.index) * 100)
+R = tmp/len(df.index) * 100
 
 
 # 결측치 처리
@@ -66,7 +66,7 @@ for r in df.index:
     else:
         E = E + abs(int(df.loc[r,"Height"]-60) - int(df.loc[r, "IQ"]))
     
-E = int(E/len(df.index))
+E = E/len(df.index)
 
 
 # H 구하기
@@ -79,11 +79,11 @@ for h in df.index:
         if df.loc[h, "Height"] <= 162 and df.loc[h, "Height"] >= 158:
             hn += 1
             
-H = int(hn/len(df.index) * 100)
+H = hn/len(df.index) * 100
 
-
-print(R, E, H)
-if R<=25 and E<=5 and H<=50:
-    print("GodDaeWoong")
-else:
+if R>25 or E>5 or H>50:
+    print(int(R), int(E), int(H))
     print("GodHyeIn")
+else:
+    print(int(R), int(E), int(H))
+    print("GodDaeWoong")
