@@ -1,3 +1,9 @@
+'''
+2018 카카오 <오픈채팅>
+https://programmers.co.kr/learn/courses/30/lessons/42888
+
+'''
+
 # 내 풀이
 
 def solution(record):
