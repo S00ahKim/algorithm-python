@@ -11,6 +11,7 @@ class Tree: #트리 구성하는 클래스
         #자신의 좌표 data
         self.data=max(data_list,key=lambda x :x[1]) #초기화 파라미터 중 y값이 제일 높은 요소가 root가 됨
         left_list =list(filter(lambda x :x[0] < self.data[0] , data_list)) #루트의 x보다 작으면 루트의 왼쪽 하위 트리
+        # filter(함수, 리스트)는 리스트의 데이터에서 조건에 맞는 값만 추출하는 데에 쓰는 함수 
         right_list = list(filter(lambda x :x[0] > self.data[0] , data_list)) #루트의 x보다 크면 루트의 오른쪽 하위 트리
 
         #왼쪽 하위 노드들
