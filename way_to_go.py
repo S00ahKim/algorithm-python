@@ -44,4 +44,4 @@ for i in range(N): # i는 행
 
         dp[i][j] = val+max(up, left, cross)
 
-print(dp)
+print(dp[N-1][N-1])
